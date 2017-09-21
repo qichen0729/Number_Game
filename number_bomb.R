@@ -1,0 +1,21 @@
+bomb <- sample(1:100 , 1)
+game <- function() {
+  number <- readline(prompt = "Please enter your number: ")
+}
+big <- 100
+samll <- 0
+repeat {   
+  response <- as.integer(game());
+  if (response < bomb) {
+    print(paste("The number is between", response, "and", big, sep = ""))
+    small <- response
+  }
+  else if ( response > bomb) {
+    print(paste("The number is between", small, "and ", response, sep = ""))
+    big <- response
+  }
+  else {
+    print("you died")
+    break
+  }
+}
